@@ -30,6 +30,14 @@ MANIFEST
 #Virtual Environment
 nfl_venv/
 
+#CSV_Files
+Active_Player_Urls.csv
+Active_Player_Basic_Stats.csv
+Active_Player_Career_Stats.csv
+Retired_Player_Urls.csv
+Retired_Player_Basic_Stats.csv
+Retired_Player_Career_Stats.csv
+
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.

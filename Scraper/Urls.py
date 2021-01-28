@@ -145,7 +145,27 @@ class Urls(object):
         "https://www.nfl.com/players/retired/s?query=s&after=c2ltcGxlLWN1cnNvcjMyOTk=", "https://www.nfl.com/players/retired/s?query=s&after=c2ltcGxlLWN1cnNvcjMzOTk=", "https://www.nfl.com/players/retired/s?query=s&after=c2ltcGxlLWN1cnNvcjM0OTk=",
         "https://www.nfl.com/players/retired/s?query=s&after=c2ltcGxlLWN1cnNvcjM1OTk=", "https://www.nfl.com/players/retired/s?query=s&after=c2ltcGxlLWN1cnNvcjM2OTk=", "https://www.nfl.com/players/retired/s?query=s&after=c2ltcGxlLWN1cnNvcjM3OTk=",
         "https://www.nfl.com/players/retired/s?query=s&after=c2ltcGxlLWN1cnNvcjM4OTk=",
-        "https://www.nfl.com/players/retired/t"]
+        "https://www.nfl.com/players/retired/t", "https://www.nfl.com/players/retired/t?query=t&after=c2ltcGxlLWN1cnNvcjk5", "https://www.nfl.com/players/retired/t?query=t&after=c2ltcGxlLWN1cnNvcjE5OQ==",
+        "https://www.nfl.com/players/retired/t?query=t&after=c2ltcGxlLWN1cnNvcjI5OQ==", "https://www.nfl.com/players/retired/t?query=t&after=c2ltcGxlLWN1cnNvcjM5OQ==", "https://www.nfl.com/players/retired/t?query=t&after=c2ltcGxlLWN1cnNvcjQ5OQ==",
+        "https://www.nfl.com/players/retired/t?query=t&after=c2ltcGxlLWN1cnNvcjU5OQ==", "https://www.nfl.com/players/retired/t?query=t&after=c2ltcGxlLWN1cnNvcjY5OQ==", "https://www.nfl.com/players/retired/t?query=t&after=c2ltcGxlLWN1cnNvcjc5OQ==",
+        "https://www.nfl.com/players/retired/t?query=t&after=c2ltcGxlLWN1cnNvcjg5OQ==", "https://www.nfl.com/players/retired/t?query=t&after=c2ltcGxlLWN1cnNvcjk5OQ==", "https://www.nfl.com/players/retired/t?query=t&after=c2ltcGxlLWN1cnNvcjEwOTk=",
+        "https://www.nfl.com/players/retired/t?query=t&after=c2ltcGxlLWN1cnNvcjExOTk=", "https://www.nfl.com/players/retired/t?query=t&after=c2ltcGxlLWN1cnNvcjEyOTk=", "https://www.nfl.com/players/retired/t?query=t&after=c2ltcGxlLWN1cnNvcjEzOTk=",
+        "https://www.nfl.com/players/retired/t?query=t&after=c2ltcGxlLWN1cnNvcjE0OTk=",
+        "https://www.nfl.com/players/retired/u", "https://www.nfl.com/players/retired/u?query=u&after=c2ltcGxlLWN1cnNvcjk5",
+        "https://www.nfl.com/players/retired/v", "https://www.nfl.com/players/retired/v?query=v&after=c2ltcGxlLWN1cnNvcjk5", "https://www.nfl.com/players/retired/v?query=v&after=c2ltcGxlLWN1cnNvcjE5OQ==",
+        "https://www.nfl.com/players/retired/v?query=v&after=c2ltcGxlLWN1cnNvcjI5OQ==", "https://www.nfl.com/players/retired/v?query=v&after=c2ltcGxlLWN1cnNvcjM5OQ==",
+        "https://www.nfl.com/players/retired/w", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjk5", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjE5OQ==",
+        "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjI5OQ==", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjM5OQ==", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjQ5OQ==",
+        "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjU5OQ==", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjY5OQ==", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjc5OQ==",
+        "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjg5OQ==", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjk5OQ==", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjEwOTk=",
+        "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjExOTk=", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjEyOTk=", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjEzOTk=",
+        "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjE0OTk=", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjE1OTk=", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjE2OTk=",
+        "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjE3OTk=", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjE4OTk=", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjE5OTk=",
+        "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjIwOTk=", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjIxOTk=", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjIyOTk=",
+        "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjIzOTk=", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjI0OTk=", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjI1OTk=",
+        "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjI2OTk=", "https://www.nfl.com/players/retired/w?query=w&after=c2ltcGxlLWN1cnNvcjI3OTk=",
+        "https://www.nfl.com/players/retired/y", "https://www.nfl.com/players/retired/y?query=y&after=c2ltcGxlLWN1cnNvcjk5", "https://www.nfl.com/players/retired/y?query=y&after=c2ltcGxlLWN1cnNvcjE5OQ==",
+        "https://www.nfl.com/players/retired/z", "https://www.nfl.com/players/retired/z?query=z&after=c2ltcGxlLWN1cnNvcjk5"]
 
     def basic_stats_urls(self): #Read urls from csv file and return a list of urls
     #return list
