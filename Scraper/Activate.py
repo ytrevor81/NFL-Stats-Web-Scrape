@@ -1,15 +1,20 @@
 from Players import *
 from Urls import *
-from Scraper_Functions.Gather_Player_Urls import *
+from Scraper_Functions.Gather_Player_Urls import Individual_Player_Links
+from Scraper_Functions.CSV_Handler import Create_CSV_Player_Urls
+
 
 Urls = Urls()
 Player = Player()
 
-with open("Player_Urls.csv", 'w') as f:
-    writer = csv.writer(f)
-    writer.writerow(['Player_URL'])
+Create_CSV_Player_Urls("Active_Player_Urls.csv", "Retired_Player_Urls.csv")
 
-Individual_Player_Links(Urls.search_for_active_players[0], "Player_Urls.csv") #THIS WILL BE DONE IN A FOR LOOP, SO PRINT SOME MESSAGES WHEN FULL PROCESS BEGINS
+count = 1
+for link in Urls.search_for_active_players:
+    Individual_Player_Links(link, "Active_Player_Urls.csv")
+    print('Processed pics for %d out of %d links' % (count, len(Urls.search_for_active_players)))
+    count+=1
+
 
 
 #This will begin the scraper store data in csv
