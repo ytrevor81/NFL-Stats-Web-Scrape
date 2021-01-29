@@ -7,9 +7,9 @@ def Get_HTML_Document(url):
         soup = bs4.BeautifulSoup(res.text,'lxml')
         return soup
     except Exception as e:
-        print("Error: " + e)
+        print("Error: " + str(e))
 
-def Individual_Player_Links(url, filename):
+def Extract_Individual_Player_Links(url, filename):
     links = [] #useable links will be placed in here
     soup = Get_HTML_Document(url) #raw HTML source code od Url
     anchor_tags = soup.find_all('a', {'class': "d3-o-player-fullname nfl-o-cta--link"}) #filters only <a> tags
