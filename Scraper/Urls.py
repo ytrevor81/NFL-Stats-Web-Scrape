@@ -1,7 +1,5 @@
 import csv
-import pandas
 from Scraper_Functions.CSV_Handler import CSV_Url_List
-#All Urls used for scraping
 
 class Urls(object):
     def __init__(self):
@@ -169,7 +167,9 @@ class Urls(object):
         "https://www.nfl.com/players/retired/z", "https://www.nfl.com/players/retired/z?query=z&after=c2ltcGxlLWN1cnNvcjk5"]
 
     def basic_stats_urls(self, filename): #Read urls from csv file and return a list of urls
-        return CSV_Url_List(filename)
+        urls = CSV_Url_List(filename)
+        urls.pop(0) #removes column header from list
+        return urls
 
 
     def stats_urls(self): #Read urls from csv file and return a list of urls AND ADDS STATS AS AN EXTRA ENDPOINT

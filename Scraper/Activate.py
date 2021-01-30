@@ -28,16 +28,21 @@ Urls = Urls()
 #    print('Stored retired player links for %d out of %d query links' % (count, len(retired_player_search_links)))
 #    count+=1
 
-individual_active_player_links = Urls.basic_stats_urls("Active_Player_Urls.csv") #list of all player urls
-print(individual_active_player_links)
+#individual_active_player_links = Urls.basic_stats_urls("Active_Player_Urls.csv") #list of all player urls
+#individual_retired_player_links = Urls.basic_stats_urls("Retired_Player_Urls.csv")
 
-#Extract_Basic_Stats("https://www.nfl.com/players/josh-allen-4/", "Active_Player_Basic_Stats.csv")
+Extract_Basic_Stats("https://www.nfl.com/players/josh-allen-4/", "Active_Player_Basic_Stats.csv")
 
 #count = 1
 #for link in individual_active_player_links:
 #    Extract_Basic_Stats(link, "Active_Player_Basic_Stats.csv")
 #    if count % 100 == 0:
-#        print('Basic stats completed for %d out of %d active players' % (count, len(retired_player_search_links)))
+#        print('Basic stats completed for %d out of %d active players' % (count, len(individual_active_player_links)))
 #    count+=1
 
-#individual_retired_player_links = Urls.basic_stats_urls("Retired_Player_Urls.csv")
+#count = 1
+#for link in individual_retired_player_links:
+#    Extract_Basic_Stats(link, "Retired_Player_Basic_Stats.csv")
+#    if count % 100 == 0:
+#        print('Basic stats completed for %d out of %d retired players' % (count, len(retired_player_search_links)))
+#    count+=1
