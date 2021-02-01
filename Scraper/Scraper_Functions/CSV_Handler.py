@@ -60,11 +60,3 @@ def Write_RetiredPlayer_Basic_Stats(player_class, filename):
                          player_class.weight,
                          player_class.college,
                          player_class.hall_of_fame])
-
-    print("Player ID: " + player_class.player_id)
-    print("Name: " + player_class.name)
-    print("Position: ", player_class.position)
-    print("Height: " + player_class.height)
-    print("Weight: " + player_class.weight)
-    print("College: " + player_class.college)
-    print("Hall_Of_Fame: " + player_class.hall_of_fame)
