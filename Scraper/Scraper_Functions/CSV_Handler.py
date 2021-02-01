@@ -20,7 +20,7 @@ def Create_CSV_Basic_Stats(filename1, filename2):
         writer.writerow(['Player_Id', 'Full_Name', 'Position', 'Number', 'Current_Team', 'Height', 'Weight', 'Experience', 'Age', 'College'])
     with open(filename2, 'w') as f:
         writer = csv.writer(f)
-        writer.writerow(['Player_Id', 'Full_Name', 'Position', 'Teams_Played_On', 'Height', 'Weight', 'Experience', 'Age', 'College', 'Hall_Of_Fame'])
+        writer.writerow(['Player_Id', 'Full_Name', 'Position', 'Height', 'Weight', 'College', 'Hall_Of_Fame'])
 
 def Create_CSV_Career_Stats(filename1, filename2):
     with open(filename1, 'w') as f:
@@ -35,14 +35,36 @@ def CSV_Url_List(filename):
         reader = csv.reader(f, delimiter=',')
         return [x for i in reader for x in i]
 
-def Write_Active_Player_Basic_Stats(player_class):
+def Write_ActivePlayer_Basic_Stats(player_class, filename):
+    with open(filename, 'a') as f:
+        writer = csv.writer(f)
+        writer.writerow([player_class.player_id,
+                         player_class.name,
+                         player_class.position,
+                         player_class.number,
+                         player_class.team,
+                         player_class.height,
+                         player_class.weight,
+                         player_class.experience,
+                         player_class.age,
+                         player_class.college])
+
+
+def Write_RetiredPlayer_Basic_Stats(player_class, filename):
+    with open(filename, 'a') as f:
+        writer = csv.writer(f)
+        writer.writerow([player_class.player_id,
+                         player_class.name,
+                         player_class.position,
+                         player_class.height,
+                         player_class.weight,
+                         player_class.college,
+                         player_class.hall_of_fame])
+
     print("Player ID: " + player_class.player_id)
     print("Name: " + player_class.name)
     print("Position: ", player_class.position)
-    print("Number: " + player_class.number)
-    print("Team: " + player_class.team)
     print("Height: " + player_class.height)
     print("Weight: " + player_class.weight)
-    print("Experience: " + player_class.experience)
-    print("Age: " + player_class.age)
     print("College: " + player_class.college)
+    print("Hall_Of_Fame: " + player_class.hall_of_fame)

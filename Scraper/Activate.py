@@ -5,15 +5,14 @@ from Scraper_Functions.Basic_Stats_Functions import Extract_Basic_Stats
 
 
 Urls = Urls()
-#ActivePlayer = ActivePlayer()
-#RetiredPlayer = RetiredPlayer()
-#active_player_search_links = Urls.search_for_active_players
-#retired_player_search_links = Urls.search_for_retired_players
+
+#active_player_query_links = Urls.active_player_query_links
+#retired_player_query_links = Urls.retired_player_query_links
 
 
 ## ---- CSV File Creation Functions ---- ##
 #Create_CSV_Player_Urls("Active_Player_Urls.csv", "Retired_Player_Urls.csv") #Create your file name in the parameters of the following functions
-#Create_CSV_Basic_Stats("Active_Player_Basic_Stats.csv", "Retired_Player_Basic_Stats.csv")
+Create_CSV_Basic_Stats("Active_Player_Basic_Stats.csv", "Retired_Player_Basic_Stats.csv")
 ## ---- ---- ##
 
 #count = 1
@@ -30,8 +29,13 @@ Urls = Urls()
 
 #individual_active_player_links = Urls.basic_stats_urls("Active_Player_Urls.csv") #list of all player urls
 #individual_retired_player_links = Urls.basic_stats_urls("Retired_Player_Urls.csv")
+#individual_active_player_stats_links = Urls.stats_urls(individual_active_player_links)
+#individual_retired_player_stats_links = Urls.stats_urls(individual_retired_player_links)
 
-Extract_Basic_Stats("https://www.nfl.com/players/josh-allen-4/", "Active_Player_Basic_Stats.csv")
+
+
+for link in ["https://www.nfl.com/players/kurt-warner/", "https://www.nfl.com/players/al-applegate/", "https://www.nfl.com/players/joe-namath/", "https://www.nfl.com/players/a-j-greene/", "https://www.nfl.com/players/bill-gutteron/"]:
+    Extract_Basic_Stats(link, "Retired_Player_Basic_Stats.csv")
 
 #count = 1
 #for link in individual_active_player_links:

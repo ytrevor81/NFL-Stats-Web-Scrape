@@ -7,7 +7,7 @@ def Get_HTML_Document(url):
         soup = bs4.BeautifulSoup(res.text,'lxml')
         return soup
     except Exception as e:
-        print("Error: " + str(e))
+        print("Error occured on this link: " + url + " and this was the error that occured: " + str(e))
 
 def Extract_Individual_Player_Links(url, filename):
     links = [] #useable links will be placed in here

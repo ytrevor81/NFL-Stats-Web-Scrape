@@ -3,7 +3,7 @@ from Scraper_Functions.CSV_Handler import CSV_Url_List
 
 class Urls(object):
     def __init__(self):
-        self.search_for_active_players = ["https://www.nfl.com/players/active/a", "https://www.nfl.com/players/active/a?query=a&after=c2ltcGxlLWN1cnNvcjk5",
+        self.active_player_query_links = ["https://www.nfl.com/players/active/a", "https://www.nfl.com/players/active/a?query=a&after=c2ltcGxlLWN1cnNvcjk5",
         "https://www.nfl.com/players/active/b", "https://www.nfl.com/players/active/b?query=b&after=c2ltcGxlLWN1cnNvcjk5", "https://www.nfl.com/players/active/b?query=b&after=c2ltcGxlLWN1cnNvcjE5OQ==",
         "https://www.nfl.com/players/active/c", "https://www.nfl.com/players/active/c?query=c&after=c2ltcGxlLWN1cnNvcjk5", "https://www.nfl.com/players/active/c?query=c&after=c2ltcGxlLWN1cnNvcjE5OQ==",
         "https://www.nfl.com/players/active/d", "https://www.nfl.com/players/active/d?query=d&after=c2ltcGxlLWN1cnNvcjk5", "https://www.nfl.com/players/active/e", "https://www.nfl.com/players/active/f",
@@ -18,7 +18,7 @@ class Urls(object):
         "https://www.nfl.com/players/active/w", "https://www.nfl.com/players/active/w?query=w&after=c2ltcGxlLWN1cnNvcjk5", "https://www.nfl.com/players/active/w?query=w&after=c2ltcGxlLWN1cnNvcjE5OQ==",
         "https://www.nfl.com/players/active/x", "https://www.nfl.com/players/active/y", "https://www.nfl.com/players/active/z"]
 
-        self.search_for_retired_players = ["https://www.nfl.com/players/retired/a", "https://www.nfl.com/players/retired/a?query=a&after=c2ltcGxlLWN1cnNvcjk5", "https://www.nfl.com/players/retired/a?query=a&after=c2ltcGxlLWN1cnNvcjE5OQ==",
+        self.retired_player_query_links = ["https://www.nfl.com/players/retired/a", "https://www.nfl.com/players/retired/a?query=a&after=c2ltcGxlLWN1cnNvcjk5", "https://www.nfl.com/players/retired/a?query=a&after=c2ltcGxlLWN1cnNvcjE5OQ==",
         "https://www.nfl.com/players/retired/a?query=a&after=c2ltcGxlLWN1cnNvcjI5OQ==", "https://www.nfl.com/players/retired/a?query=a&after=c2ltcGxlLWN1cnNvcjM5OQ==", "https://www.nfl.com/players/retired/a?query=a&after=c2ltcGxlLWN1cnNvcjQ5OQ==",
         "https://www.nfl.com/players/retired/a?query=a&after=c2ltcGxlLWN1cnNvcjU5OQ==", "https://www.nfl.com/players/retired/a?query=a&after=c2ltcGxlLWN1cnNvcjY5OQ==", "https://www.nfl.com/players/retired/a?query=a&after=c2ltcGxlLWN1cnNvcjc5OQ==",
         "https://www.nfl.com/players/retired/a?query=a&after=c2ltcGxlLWN1cnNvcjg5OQ==", "https://www.nfl.com/players/retired/a?query=a&after=c2ltcGxlLWN1cnNvcjk5OQ==", "https://www.nfl.com/players/retired/a?query=a&after=c2ltcGxlLWN1cnNvcjEwOTk=",
@@ -172,6 +172,7 @@ class Urls(object):
         return urls
 
 
-    def stats_urls(self): #Read urls from csv file and return a list of urls AND ADDS STATS AS AN EXTRA ENDPOINT
-    #return list
-        pass
+    def stats_urls(self, basic_stats_links): #Read urls from csv file and return a list of urls AND ADDS STATS AS AN EXTRA ENDPOINT
+        stats_endpoint = "stats/"
+        stats_urls = [link + stats_endpoint for link in basic_stats_links]
+        return stats_urls
