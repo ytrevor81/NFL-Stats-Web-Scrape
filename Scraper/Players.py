@@ -1,4 +1,5 @@
-import csv, bs4, re
+''' ActivePlayer and RetiredPlayer are for storing and processing basic stats,
+Player_CareerStats is for storing and processing career stats of all players '''
 
 class ActivePlayer(object):
     def __init__(self):
@@ -82,3 +83,23 @@ class RetiredPlayer(ActivePlayer):
             self.hall_of_fame = "True"
         else:
             self.hall_of_fame = "False"
+
+
+class Player_CareerStats(object):
+    #Cannot do for offensive linemen, or players with no stats
+    def __init__(self):
+        self.player_id = None
+        self.passing = None
+        self.rushing = None
+        self.receiving = None
+        self.defense = None
+        self.fumbles = None
+        self.kicking = None
+        self.punting = None
+        self.kickreturns = None
+        self.puntreturns = None
+
+    def Get_Player_Id(self, link):
+        player_id_tuple = link.partition("https://www.nfl.com/players/")
+        player_id = player_id_tuple[2].replace("/", "")
+        self.player_id = player_id

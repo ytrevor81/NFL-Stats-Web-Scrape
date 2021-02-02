@@ -37,6 +37,25 @@ Active_Player_Career_Stats.csv
 Retired_Player_Urls.csv
 Retired_Player_Basic_Stats.csv
 Retired_Player_Career_Stats.csv
+ActivePlayer_Passing_Stats.csv
+ActivePlayer_Rushing_Stats.csv
+ActivePlayer_Receiving_Stats.csv
+ActivePlayer_Fumbles_Stats.csv
+ActivePlayer_Defense_Stats.csv
+ActivePlayer_Kicking_Stats.csv
+ActivePlayer_Punting_Stats.csv
+ActivePlayer_KickReturns_Stats.csv
+ActivePlayer_PuntReturns_Stats.csv
+RetiredPlayer_Passing_Stats.csv
+RetiredPlayer_Rushing_Stats.csv
+RetiredPlayer_Receiving_Stats.csv
+RetiredPlayer_Fumbles_Stats.csv
+RetiredPlayer_Defense_Stats.csv
+RetiredPlayer_Kicking_Stats.csv
+RetiredPlayer_Punting_Stats.csv
+RetiredPlayer_KickReturns_Stats.csv
+RetiredPlayer_PuntReturns_Stats.csv
+
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
