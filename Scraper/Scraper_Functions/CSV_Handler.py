@@ -31,6 +31,7 @@ def Create_CSV_Career_Stats(filename1, filename2):
         writer.writerow(['Retired_Player_Url'])
 
 def Create_CSV_Player_Career_Stats(passingfile, rushingfile, receivingfile, fumblesfile, defensefile, kickingfile, puntingfile, kickreturnsfile, puntreturnsfile):
+    '''Each player's total combined stats will be the last input, but the year will be 'Total', and Team will be --'''
     with open(passingfile, 'w') as f:
         writer = csv.writer(f)
         writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Attempts', 'Completions', 'Completion_Percentage', 'Yards', 'Average', 'Long', 'TDs', 'INTs', 'First_Downs', 'First_Down_Percentage', 'Passes_Over_Twenty_Yards', 'Passes_Over_Forty_Yards', 'Sacks', 'Sack_Yards', 'Passer_Rating'])
