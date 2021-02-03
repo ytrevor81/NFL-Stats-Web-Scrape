@@ -60,7 +60,7 @@ Urls = Urls()
 #individual_retired_player_stats_links = Urls.stats_urls(individual_retired_player_links)
 ## ---- ---- ##
 
-Extract_Career_Stats("https://www.nfl.com/players/deshaun-watson/stats/")
+Extract_Career_Stats("https://www.nfl.com/players/tom-brady/stats/")
 
 ## ---- Storing all individual player basic stats and career ---- ##
 #count = 1
