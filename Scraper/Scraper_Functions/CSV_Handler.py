@@ -90,3 +90,6 @@ def Write_RetiredPlayer_Basic_Stats(player_class, filename):
                          player_class.weight,
                          player_class.college,
                          player_class.hall_of_fame])
+
+def Write_Career_Stats(player_class, passingfilename, rushingfilename, receivingfilename, fumblesfilename, defensefilename, kickingfilename, puntingfilename, kickreturnsfilename, puntreturnsfilename):
+    pass
