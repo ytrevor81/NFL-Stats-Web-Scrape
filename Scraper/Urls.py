@@ -2,6 +2,7 @@ import csv
 from Scraper_Functions.CSV_Handler import CSV_Url_List
 
 class Urls(object):
+    ''' active_player_query_links and retired_player_query_links are links required to extract individual player links for the query players page '''
     def __init__(self):
         self.active_player_query_links = ["https://www.nfl.com/players/active/a", "https://www.nfl.com/players/active/a?query=a&after=c2ltcGxlLWN1cnNvcjk5",
         "https://www.nfl.com/players/active/b", "https://www.nfl.com/players/active/b?query=b&after=c2ltcGxlLWN1cnNvcjk5", "https://www.nfl.com/players/active/b?query=b&after=c2ltcGxlLWN1cnNvcjE5OQ==",

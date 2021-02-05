@@ -98,7 +98,7 @@ class Player_CareerStats(object):
         self.punting = None
         self.kickreturns = None
         self.puntreturns = None
-        self.has_stats = True
+        self.has_stats = True #if player does not have a stats table on their webpage, this is turned to False
 
     def Get_Player_Id(self, link):
         player_id_tuple = link.partition("https://www.nfl.com/players/")

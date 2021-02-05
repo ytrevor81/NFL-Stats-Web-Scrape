@@ -76,7 +76,7 @@ def Assign_To_Player_Class(link, player_class, categories_list, player_stats_lis
     else:
         pass
 
-def Get_Table_Soup(player_class, soup):
+def Get_Table_Soup(player_class, soup): #this grabs each table on a player's stats webpage (ex: https://www.nfl.com/players/tom-brady/stats/)
     tables = soup.find_all('div', {'class': "d3-o-table--horizontal-scroll"})
     if len(tables) == 0:
         player_class.has_stats = False

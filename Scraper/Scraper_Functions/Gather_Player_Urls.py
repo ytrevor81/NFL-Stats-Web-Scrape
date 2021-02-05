@@ -1,7 +1,7 @@
 import bs4, requests
 from Scraper_Functions.CSV_Handler import Write_Player_Links
 
-def Get_HTML_Document(url):
+def Get_HTML_Document(url): #used to grab full webpage of given url
     try:
         res = requests.get(url)
         soup = bs4.BeautifulSoup(res.text,'lxml')
