@@ -22,10 +22,10 @@ There are three parts to this code:
   4. Gather_Player_Urls.py
 
 ### <i>Activate.py</i>
-This is where the core functions of the code are executed, gathering and processing query Urls, player Urls, and creating the appropriate CSV files to store data.
+This is where the core functions of the code are executed, gathering and processing query urls, player urls, and creating the appropriate CSV files to store data.
 
 ### <i>Classes: Players.py and Urls.py</i>
-In Players.py, there are three classes used to store player data: <i>ActivePlayer</i>, <i>RetiredPlayer</i>, and <i>Player_CareerStats</i>. <i>ActivePlayer</i> and <i>RetiredPlayer</i> are initialized once, so that only one instance is used in the data scraping process, and are used to store and process basic stats of individual players. <i>Player_CareerStats</i> is initialized everytime a new player is processed, both active and retired, and is used to store career stats for each player. If any player has no stats table present in their webpage, then they will be skipped and thus not recorded in any career stats CSV file.
+In Players.py, three classes are used to store player data: <i>ActivePlayer</i>, <i>RetiredPlayer</i>, and <i>Player_CareerStats</i>. <i>ActivePlayer</i> and <i>RetiredPlayer</i> are initialized once, so that only one instance is used in the data scraping process, and are used to store and process basic stats of individual players. <i>Player_CareerStats</i> is initialized everytime a new player's career stats are processed, both active and retired. If any player does not have any stats tables present in their webpage, then they will be skipped and thus not recorded in any career stats CSV file.
 
 The <i>Urls</i> class holds all player query links for active players and retired players, and aids in processing those links and other links.
 
@@ -38,9 +38,9 @@ The <i>Get_HTML_Document</i> function gathers the "soup" of all links pasted thr
 All functions creating, appending, and writing CSV files are held in this file.
 
 ### <i>Basic_Stats_Functions.py</i>
-This file handles extracting basic profile all players, but in separate functions for active players and retired players. A lot of information available for active players and not available for retired players, due to the massive amount of retired players as compared to active players. Also, the code records whether or not a retired player is in the Hall Of Fame. 
+This file handles extracting basic profile stats for all players, but active players and retired players are processed in separate functions. A lot of information available for active players are not available for retired players, due to the massive amount of retired players as compared to active players. Also, the code records whether or not a retired player is in the Hall Of Fame. 
 
 ### <i>Career_Stats_Functions.py</i>
-Due to active players and retired players having the same format in displaying their stats on their individual webpages, these functions handle both active and retired players. Most likely the sloppiest code in this web scraper is in the function <i>Player_Stats</i>, even though it works as expected. Each player's webpage has no unique identifier in HTML in separating thier stats tables, so this was the best way I found at the time to get around that obstacle.
+These functions handle both active and retired players. Most likely the sloppiest code in this web scraper is in the function <i>Player_Stats</i>, even though it works as expected. Each player's stats table has no unique identifier in HTML, and no particular class or identifier separating, for example, a "Passing" table from a "Punting" table from player to player. So this was the best way I found at the time to get around that obstacle.
 
-If a player has no stats table in thier webpage, then the player is not  recorded in the career stats CSV files.
+If a player does not have any stats tables in their webpage, then the player is not recorded in the career stats CSV files.
