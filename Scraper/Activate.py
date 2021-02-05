@@ -60,19 +60,6 @@ individual_active_player_stats_links = Urls.stats_urls(individual_active_player_
 #individual_retired_player_stats_links = Urls.stats_urls(individual_retired_player_links)
 ## ---- ---- ##
 
-# ["https://www.nfl.com/players/aaron-donald/stats/", "https://www.nfl.com/players/justin-herbert/stats/", "https://www.nfl.com/players/kurt-warner/stats/", "https://www.nfl.com/players/mathewson/stats/", "https://www.nfl.com/players/julian-edelman/stats/"]
-
-for player in individual_active_player_stats_links:
-    Extract_Career_Stats(player,
-                             "ActivePlayer_Passing_Stats.csv",
-                             "ActivePlayer_Rushing_Stats.csv",
-                             "ActivePlayer_Receiving_Stats.csv",
-                             "ActivePlayer_Fumbles_Stats.csv",
-                             "ActivePlayer_Defense_Stats.csv",
-                             "ActivePlayer_Kicking_Stats.csv",
-                             "ActivePlayer_Punting_Stats.csv",
-                             "ActivePlayer_KickReturns_Stats.csv",
-                             "ActivePlayer_PuntReturns_Stats.csv")
 
 ## ---- Storing all individual player basic stats and career ---- ##
 #count = 1
@@ -91,27 +78,36 @@ for player in individual_active_player_stats_links:
 #        print('Basic stats completed for %d out of %d retired players' % (count, len(individual_retired_player_links)))
 #    count+=1
 
-#count = 1
-#print("Downloading career stats for active players...wait for message after 100 players have been processed")
-#for link in individual_active_player_stats_links:
-#    Extract_Career_Stats(link,
-#                         "ActivePlayer_Passing_Stats.csv",
-#                         "ActivePlayer_Rushing_Stats.csv",
-#                         "ActivePlayer_Receiving_Stats.csv",
-#                         "ActivePlayer_Fumbles_Stats.csv",
-#                         "ActivePlayer_Defense_Stats.csv",
-#                         "ActivePlayer_Kicking_Stats.csv",
-#                         "ActivePlayer_Punting_Stats.csv",
-#                         "ActivePlayer_KickReturns_Stats.csv",
-#                         "ActivePlayer_PuntReturns_Stats.csv")
-#    if count % 100 == 0:
-#        print('Basic stats completed for %d out of %d retired players' % (count, len(individual_active_player_stats_links)))
-#    count+=1
+count = 1
+print("Downloading career stats for active players...wait for message after 100 players have been processed")
+for link in individual_active_player_stats_links:
+    Extract_Career_Stats(link,
+                         "ActivePlayer_Passing_Stats.csv",
+                         "ActivePlayer_Rushing_Stats.csv",
+                         "ActivePlayer_Receiving_Stats.csv",
+                         "ActivePlayer_Fumbles_Stats.csv",
+                         "ActivePlayer_Defense_Stats.csv",
+                         "ActivePlayer_Kicking_Stats.csv",
+                         "ActivePlayer_Punting_Stats.csv",
+                         "ActivePlayer_KickReturns_Stats.csv",
+                         "ActivePlayer_PuntReturns_Stats.csv")
+    if count % 100 == 0:
+        print('Career stats completed for %d out of %d retired players' % (count, len(individual_active_player_stats_links)))
+    count+=1
 
 #count = 1
 #print("Downloading career stats for retired players...wait for message after 100 players have been processed")
-#for link in individual_retired_player_links:
-#    Extract_Basic_Stats(link, "Retired_Player_Basic_Stats.csv")
+#for link in individual_retired_player_stats_links:
+#    Extract_Career_Stats(link,
+#                     "RetiredPlayer_Passing_Stats.csv",
+#                     "RetiredPlayer_Rushing_Stats.csv",
+#                     "RetiredPlayer_Receiving_Stats.csv",
+#                     "RetiredPlayer_Fumbles_Stats.csv",
+#                     "RetiredPlayer_Defense_Stats.csv",
+#                     "RetiredPlayer_Kicking_Stats.csv",
+#                     "RetiredPlayer_Punting_Stats.csv",
+#                     "RetiredPlayer_KickReturns_Stats.csv",
+#                     "RetiredPlayer_PuntReturns_Stats.csv")
 #    if count % 100 == 0:
-#        print('Basic stats completed for %d out of %d retired players' % (count, len(individual_retired_player_links)))
+#        print('Career stats completed for %d out of %d retired players' % (count, len(individual_retired_player_stats_links)))
 #    count+=1
