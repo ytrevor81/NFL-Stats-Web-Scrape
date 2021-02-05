@@ -30,36 +30,6 @@ def Create_CSV_Career_Stats(filename1, filename2):
         writer = csv.writer(f)
         writer.writerow(['Retired_Player_Url'])
 
-def Create_CSV_Player_Career_Stats(passingfile, rushingfile, receivingfile, fumblesfile, defensefile, kickingfile, puntingfile, kickreturnsfile, puntreturnsfile):
-    '''Each player's total combined stats will be the last input, but the year will be 'Total', and Team will be --'''
-    with open(passingfile, 'w') as f:
-        writer = csv.writer(f)
-        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Attempts', 'Completions', 'Completion_Percentage', 'Yards', 'Average', 'Long', 'TDs', 'INTs', 'First_Downs', 'First_Down_Percentage', 'Passes_Over_Twenty_Yards', 'Passes_Over_Forty_Yards', 'Sacks', 'Sack_Yards', 'Passer_Rating'])
-    with open(rushingfile, 'w') as f:
-        writer = csv.writer(f)
-        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Attempts', 'Yards', 'Average', 'Long', 'TDs', 'First_Downs', 'First_Down_Percentage', 'Rushes_Over_Twenty_Yards', 'Rushes_Over_Forty_Yards', 'Fumbles'])
-    with open(receivingfile, 'w') as f:
-        writer = csv.writer(f)
-        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Receptions', 'Yards', 'Average', 'Long', 'TDs', 'First_Downs', 'First_Down_Percentage', 'Receptions_Over_Twenty_Yards', 'Receptions_Over_Forty_Yards'])
-    with open(fumblesfile, 'w') as f:
-        writer = csv.writer(f)
-        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Fumbles', 'Fumbles_Lost', 'Forced_Fumbles', 'Own_Recovery', 'Opposing_Recovery', 'TDs'])
-    with open(defensefile, 'w') as f:
-        writer = csv.writer(f)
-        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Tackles', 'Solo_Tackles', 'Assisted_Tackles', 'Sacks', 'Sack_Yards', 'Safties', 'Passes_Deflected', 'INTs', 'TDs', 'INT_Yards', 'Average', 'Long'])
-    with open(kickingfile, 'w') as f:
-        writer = csv.writer(f)
-        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Kicks_1_to_19_Yards', 'Kicks_20_to_29_Yards', 'Kicks_30_to_39_Yards', 'Kicks_40_to_49_Yards', 'Kicks_Over_50', 'FGs', 'FG_Attempts', 'Percentage'])
-    with open(puntingfile, 'w') as f:
-        writer = csv.writer(f)
-        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Punts', 'Yards', 'Long', 'Average', 'Punts_Blocked', 'Returns', 'Return_Yards', 'Punts_In_20', 'Net_Average'])
-    with open(kickreturnsfile, 'w') as f:
-        writer = csv.writer(f)
-        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Returns', 'Yards', 'Average', 'Long', 'TDs', 'Returns_Over_Twenty_Yards', 'Returns_Over_Forty_Yards', 'Fair_Catches', 'Fumbles'])
-    with open(puntreturnsfile, 'w') as f:
-        writer = csv.writer(f)
-        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Returns', 'Yards', 'Average', 'Long', 'TDs', 'Returns_Over_Twenty_Yards', 'Returns_Over_Forty_Yards', 'Fair_Catches', 'Fumbles'])
-
 def CSV_Url_List(filename):
     with open(filename, 'r') as f:
         reader = csv.reader(f, delimiter=',')
@@ -91,5 +61,53 @@ def Write_RetiredPlayer_Basic_Stats(player_class, filename):
                          player_class.college,
                          player_class.hall_of_fame])
 
+def Create_CSV_Player_Career_Stats(passingfile, rushingfile, receivingfile, fumblesfile, defensefile, kickingfile, puntingfile, kickreturnsfile, puntreturnsfile):
+    '''Each player's total combined stats will be the last input, but the year will be 'Total', and Team will be --'''
+    with open(passingfile, 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Attempts', 'Completions', 'Completion_Percentage', 'Yards', 'Average', 'Long', 'TDs', 'INTs', 'First_Downs', 'First_Down_Percentage', 'Passes_Over_Twenty_Yards', 'Passes_Over_Forty_Yards', 'Sacks', 'Sack_Yards', 'Passer_Rating'])
+    with open(rushingfile, 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Attempts', 'Yards', 'Average', 'Long', 'TDs', 'First_Downs', 'First_Down_Percentage', 'Rushes_Over_Twenty_Yards', 'Rushes_Over_Forty_Yards', 'Fumbles'])
+    with open(receivingfile, 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Receptions', 'Yards', 'Average', 'Long', 'TDs', 'First_Downs', 'First_Down_Percentage', 'Receptions_Over_Twenty_Yards', 'Receptions_Over_Forty_Yards'])
+    with open(fumblesfile, 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Fumbles', 'Fumbles_Lost', 'Forced_Fumbles', 'Own_Recovery', 'Opposing_Recovery', 'TDs'])
+    with open(defensefile, 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Tackles', 'Solo_Tackles', 'Assisted_Tackles', 'Sacks', 'Sack_Yards', 'Safties', 'Passes_Deflected', 'INTs', 'TDs', 'INT_Yards', 'Average', 'Long'])
+    with open(kickingfile, 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Kicks_1_to_19_Yards', 'Kicks_20_to_29_Yards', 'Kicks_30_to_39_Yards', 'Kicks_40_to_49_Yards', 'Kicks_Over_50', 'FGs', 'FG_Attempts', 'Percentage'])
+    with open(puntingfile, 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Punts', 'Yards', 'Long', 'Average', 'Punts_Blocked', 'Returns', 'Return_Yards', 'Punts_In_20', 'Net_Average'])
+    with open(kickreturnsfile, 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Returns', 'Yards', 'Average', 'Long', 'TDs', 'Returns_Over_Twenty_Yards', 'Returns_Over_Forty_Yards', 'Fair_Catches', 'Fumbles'])
+    with open(puntreturnsfile, 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(['Player_Id', 'Year', 'Team', 'Games_Played', 'Returns', 'Yards', 'Average', 'Long', 'TDs', 'Returns_Over_Twenty_Yards', 'Returns_Over_Forty_Yards', 'Fair_Catches', 'Fumbles'])
+
+def Write_Stats_In_CSV(stats, filename):
+    if stats != None:
+        with open(filename, 'a') as f:
+            writer = csv.writer(f)
+            for row in stats:
+                writer.writerow(row)
+
 def Write_Career_Stats(player_class, passingfilename, rushingfilename, receivingfilename, fumblesfilename, defensefilename, kickingfilename, puntingfilename, kickreturnsfilename, puntreturnsfilename):
-    pass
+    if player_class.has_stats:
+        Write_Stats_In_CSV(player_class.passing, passingfilename)
+        Write_Stats_In_CSV(player_class.rushing, rushingfilename)
+        Write_Stats_In_CSV(player_class.receiving, receivingfilename)
+        Write_Stats_In_CSV(player_class.fumbles, fumblesfilename)
+        Write_Stats_In_CSV(player_class.defense, defensefilename)
+        Write_Stats_In_CSV(player_class.kicking, kickingfilename)
+        Write_Stats_In_CSV(player_class.punting, puntingfilename)
+        Write_Stats_In_CSV(player_class.kickreturns, kickreturnsfilename)
+        Write_Stats_In_CSV(player_class.puntreturns, puntreturnsfilename)
+    else:
+        pass

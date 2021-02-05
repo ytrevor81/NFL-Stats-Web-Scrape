@@ -86,8 +86,7 @@ class RetiredPlayer(ActivePlayer):
 
 
 class Player_CareerStats(object):
-    #Cannot do for offensive linemen, or players with no stats
-    #Create new object through each player
+    ''' Players with no career stats will not be recorded via csv '''
     def __init__(self):
         self.player_id = None
         self.passing = None
@@ -103,5 +102,5 @@ class Player_CareerStats(object):
 
     def Get_Player_Id(self, link):
         player_id_tuple = link.partition("https://www.nfl.com/players/")
-        player_id = player_id_tuple[2].replace("/", "")
+        player_id = player_id_tuple[2].replace("/stats/", "")
         self.player_id = player_id

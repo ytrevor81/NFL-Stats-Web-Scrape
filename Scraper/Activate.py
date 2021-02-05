@@ -15,15 +15,15 @@ Urls = Urls()
 ## ---- CSV File Creation Functions ---- ##
 #Create_CSV_Player_Urls("Active_Player_Urls.csv", "Retired_Player_Urls.csv") #Create your file name in the parameters of the following functions
 #Create_CSV_Basic_Stats("Active_Player_Basic_Stats.csv", "Retired_Player_Basic_Stats.csv")
-#Create_CSV_Player_Career_Stats("ActivePlayer_Passing_Stats.csv",
-#                                     "ActivePlayer_Rushing_Stats.csv",
-#                                     "ActivePlayer_Receiving_Stats.csv",
-#                                     "ActivePlayer_Fumbles_Stats.csv",
-#                                     "ActivePlayer_Defense_Stats.csv",
-#                                     "ActivePlayer_Kicking_Stats.csv",
-#                                     "ActivePlayer_Punting_Stats.csv",
-#                                     "ActivePlayer_KickReturns_Stats.csv",
-#                                     "ActivePlayer_PuntReturns_Stats.csv")
+Create_CSV_Player_Career_Stats("ActivePlayer_Passing_Stats.csv",
+                                     "ActivePlayer_Rushing_Stats.csv",
+                                     "ActivePlayer_Receiving_Stats.csv",
+                                     "ActivePlayer_Fumbles_Stats.csv",
+                                     "ActivePlayer_Defense_Stats.csv",
+                                     "ActivePlayer_Kicking_Stats.csv",
+                                     "ActivePlayer_Punting_Stats.csv",
+                                     "ActivePlayer_KickReturns_Stats.csv",
+                                     "ActivePlayer_PuntReturns_Stats.csv")
 #Create_CSV_Player_Career_Stats("RetiredPlayer_Passing_Stats.csv",
 #                                     "RetiredPlayer_Rushing_Stats.csv",
 #                                     "RetiredPlayer_Receiving_Stats.csv",
@@ -54,13 +54,25 @@ Urls = Urls()
 
 
 ## ---- Fetching all player links into a usable list: First, the their initial link is used to fetch basic stats. Then, we need to add a '/stats/ endpoint to each link to process career stats ---- ##
-#individual_active_player_links = Urls.basic_stats_urls("Active_Player_Urls.csv") #list of all player urls. Example: "https://www.nfl.com/players/deshaun-watson/"
+individual_active_player_links = Urls.basic_stats_urls("Active_Player_Urls.csv") #list of all player urls. Example: "https://www.nfl.com/players/deshaun-watson/"
 #individual_retired_player_links = Urls.basic_stats_urls("Retired_Player_Urls.csv")
-#individual_active_player_stats_links = Urls.stats_urls(individual_active_player_links) # Example: https://www.nfl.com/players/deshaun-watson/stats/
+individual_active_player_stats_links = Urls.stats_urls(individual_active_player_links) # Example: https://www.nfl.com/players/deshaun-watson/stats/
 #individual_retired_player_stats_links = Urls.stats_urls(individual_retired_player_links)
 ## ---- ---- ##
 
-Extract_Career_Stats("https://www.nfl.com/players/aaron-donald/stats/")
+# ["https://www.nfl.com/players/aaron-donald/stats/", "https://www.nfl.com/players/justin-herbert/stats/", "https://www.nfl.com/players/kurt-warner/stats/", "https://www.nfl.com/players/mathewson/stats/", "https://www.nfl.com/players/julian-edelman/stats/"]
+
+for player in individual_active_player_stats_links:
+    Extract_Career_Stats(player,
+                             "ActivePlayer_Passing_Stats.csv",
+                             "ActivePlayer_Rushing_Stats.csv",
+                             "ActivePlayer_Receiving_Stats.csv",
+                             "ActivePlayer_Fumbles_Stats.csv",
+                             "ActivePlayer_Defense_Stats.csv",
+                             "ActivePlayer_Kicking_Stats.csv",
+                             "ActivePlayer_Punting_Stats.csv",
+                             "ActivePlayer_KickReturns_Stats.csv",
+                             "ActivePlayer_PuntReturns_Stats.csv")
 
 ## ---- Storing all individual player basic stats and career ---- ##
 #count = 1
