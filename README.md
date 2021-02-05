@@ -1,7 +1,7 @@
 # NFL-Datascraper
 This web scraper gathers basic statistics and career statistics provided by the NFL on their official website for all active players and all 40,000+ retired players.
 
-## How to Run the code
+## How to run the code
 After installing the requirements from requirements.txt, open your preferred terminal, navigate into the Scraper directory and type the command "python Activate.py"
 
 ## Summary
