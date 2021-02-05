@@ -1,5 +1,5 @@
 # NFL-Datascraper
-This web scraper gathers basic statistics and career statistics provided by the NFL on their official website for all active players and all 40,000+ retired players.
+This web scraper gathers basic statistics and career statistics provided by the NFL on their official website for active players and all 40,000+ retired players.
 
 ## How to run the code
 After installing the requirements from requirements.txt, open your preferred terminal, navigate into the Scraper directory and type the command "python Activate.py"
@@ -8,7 +8,7 @@ After installing the requirements from requirements.txt, open your preferred ter
 There are three parts to this code:
 
 1. Gathering individual player links, in order to access their profile page
-2. Gathering basic stats (ex. name, college, height, weight, etc) for each player
+2. Gathering basic stats for each player (ex. name, college, height, weight, etc)
 3. Gathering career stats for each player
 
 ## Files and Explanation
@@ -42,3 +42,5 @@ This file handles extracting basic profile all players, but in separate function
 
 ### <i>Career_Stats_Functions.py</i>
 Due to active players and retired players having the same format in displaying their stats on their individual webpages, these functions handle both active and retired players. Most likely the sloppiest code in this web scraper is in the function <i>Player_Stats</i>, even though it works as expected. Each player's webpage has no unique identifier in HTML in separating thier stats tables, so this was the best way I found at the time to get around that obstacle.
+
+If a player has no stats table in thier webpage, then the player is not  recorded in the career stats CSV files.
