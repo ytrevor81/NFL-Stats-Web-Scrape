@@ -4,6 +4,8 @@ This web scraper gathers basic statistics and career statistics provided by the 
 ## How to run the code
 After installing the requirements from requirements.txt, open your preferred terminal, navigate into the Scraper directory and type the command "python Activate.py"
 
+Overall, the entire web scraping process of gathering individual player links, basic stats, and career stats should take most of the day to complete, depending on your computer and internet speed/connection.  
+
 ## Summary
 There are three parts to this code:
 
