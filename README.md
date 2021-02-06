@@ -27,7 +27,7 @@ There are three parts to this code:
 This is where the core functions of the code are executed, gathering and processing query urls, player urls, and creating the appropriate CSV files to store data.
 
 ### <i>Classes: Players.py and Urls.py</i>
-In Players.py, three classes are used to store player data: <i>ActivePlayer</i>, <i>RetiredPlayer</i>, and <i>Player_CareerStats</i>. <i>ActivePlayer</i> and <i>RetiredPlayer</i> are initialized once, so that only one instance is used in the data scraping process, and are used to store and process basic stats of individual players. <i>Player_CareerStats</i> is initialized everytime a new player's career stats are processed, both active and retired. If any player does not have any stats tables present in their webpage, then they will be skipped and thus not recorded in any career stats CSV file.
+In Players.py, three classes are used to store player data: <i>ActivePlayer</i>, <i>RetiredPlayer</i>, and <i>Player_CareerStats</i>. <i>ActivePlayer</i> and <i>RetiredPlayer</i> are initialized once, so that only one instance is used in the data scraping process, and are used to store and process basic stats of individual players. <i>Player_CareerStats</i> is initialized every time a new player's career stats are processed, both active and retired. If any player does not have any stats tables present in their webpage, then they will be skipped and thus not recorded in any career stats CSV file.
 
 The <i>Urls</i> class holds all player query links for active players and retired players, and aids in processing those links and other links.
 
