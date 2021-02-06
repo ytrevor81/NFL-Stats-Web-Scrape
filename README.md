@@ -1,4 +1,4 @@
-# NFL-Datascraper
+# NFL-Stats-Web-Scrape
 This web scraper gathers basic statistics and career statistics provided by the NFL on their official website for active players and all 40,000+ retired players.
 
 ## How to run the code
